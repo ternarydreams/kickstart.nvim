@@ -162,6 +162,7 @@ return {
         basedpyright = {
           settings = {
             typeCheckingMode = 'standard',
+            reportMissingParameterType = 'none',
           },
         },
         verible = {},
