@@ -159,7 +159,11 @@ return {
         clangd = {},
         cmake = {},
         -- gopls = {},
-        basedpyright = {},
+        basedpyright = {
+          settings = {
+            typeCheckingMode = 'standard',
+          },
+        },
         verible = {},
         lua_ls = {
           -- cmd = {...},
