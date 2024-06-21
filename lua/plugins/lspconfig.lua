@@ -159,7 +159,7 @@ return {
         clangd = {},
         cmake = {},
         -- gopls = {},
-        basedpyright = {
+        pyright = {
           settings = {
             python = {
               analysis = {
