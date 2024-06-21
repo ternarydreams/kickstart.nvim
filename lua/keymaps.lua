@@ -40,6 +40,5 @@ vim.keymap.set('n', 'td', function()
 end, { desc = '[T]ab [D]elete' })
 vim.keymap.set('n', 'tn', '<cmd>bnext<CR>', { desc = '[T]ab [N]ext' })
 vim.keymap.set('n', 'tp', '<cmd>bprev<CR>', { desc = '[T]ab [P]revious' })
--- vim.keymap.set('n', '<leader>bb, function')
--- vim.keymap.set('n', '<leader>bd', function ()
---   )
+
+vim.keymap.set('n', ';', ':')
