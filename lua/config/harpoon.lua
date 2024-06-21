@@ -37,9 +37,9 @@ vim.keymap.set('n', '<C-8>', function()
 end)
 
 -- Toggle previous & next buffers stored within Harpoon list
-vim.keymap.set('n', '<M-P>', function()
+vim.keymap.set('n', '<M-p>', function()
   harpoon:list():prev()
 end)
-vim.keymap.set('n', '<M-N>', function()
+vim.keymap.set('n', '<M-n>', function()
   harpoon:list():next()
 end)
