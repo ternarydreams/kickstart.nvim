@@ -161,8 +161,11 @@ return {
         -- gopls = {},
         basedpyright = {
           settings = {
-            typeCheckingMode = 'standard',
-            reportMissingParameterType = 'none',
+            python = {
+              analysis = {
+                typeCheckingMode = 'off',
+              },
+            },
           },
         },
         verible = {},

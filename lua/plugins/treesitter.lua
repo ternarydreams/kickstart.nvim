@@ -18,7 +18,7 @@ return {
         'verilog',
         -- 'go',
         'json',
-      },      -- Autoinstall languages that are not installed
+      }, -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
         enable = true,
