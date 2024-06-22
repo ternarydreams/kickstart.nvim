@@ -2,16 +2,11 @@
 --  To check the current status of your plugins, run
 --    :Lazy
 require('lazy').setup({
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  --
+
   { -- Detect tabstop and shiftwidth automatically
     'tpope/vim-sleuth',
     event = 'VimEnter',
   },
-  -- NOTE: Plugins can also be added by using a table,
-  -- with the first argument being the link and the following
-  -- keys can be used to configure plugin behavior/loading/etc.
-  --
   -- Use `opts = {}` to force a plugin to be loaded.
   --  This is equivalent to:
   --    require('Comment').setup({})
@@ -33,6 +28,7 @@ require('lazy').setup({
   require 'plugins.conform',
   require 'plugins.cmp',
   require 'plugins.tokyonight',
+  -- require 'plugins.jabuti',
   require 'plugins.todo-comments',
   require 'plugins.mini',
   require 'plugins.treesitter',
