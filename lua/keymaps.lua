@@ -11,12 +11,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagn
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
--- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
--- is not what someone will guess without a bit more experience.
---
--- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
--- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Keybinds to make split navigation easier.
@@ -30,15 +24,12 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Keybinds to make navigation in insert mode easier
 vim.keymap.set('i', '<C-b>', '<ESC>^i', { desc = 'move beginning of line' })
 vim.keymap.set('i', '<C-e>', '<End>', { desc = 'move end of line' })
-vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'move left' })
-vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'move right' })
-vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'move down' })
-vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'move up' })
+-- vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'move left' })
+-- vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'move right' })
+-- vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'move down' })
+-- vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'move up' })
 
-vim.keymap.set('n', 'td', function()
-  MiniBufremove.delete()
-end, { desc = '[T]ab [D]elete' })
-vim.keymap.set('n', 'tn', '<cmd>bnext<CR>', { desc = '[T]ab [N]ext' })
-vim.keymap.set('n', 'tp', '<cmd>bprev<CR>', { desc = '[T]ab [P]revious' })
-
-vim.keymap.set('n', ';', ':')
+vim.keymap.set('n', '<leader>bd', '<cmd>bdelete<CR>', { desc = '[B]uffer [D]elete' })
+vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })
+vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>', { desc = '[B]uffer [P]revious' })
+-- vim.keymap.set('n', ';', ':')
