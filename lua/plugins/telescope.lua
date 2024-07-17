@@ -85,7 +85,7 @@ return {
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', function()
-        builtin.buffers(require('telescope.themes').get_ivy { initial_mode = 'normal' })
+        builtin.buffers(require('telescope.themes').get_ivy { initial_mode = 'insert' })
       end, { desc = '[ ] Find existing buffers' })
       -- vim.keymap.set('n', '<leader>bf', function()
       --   builtin.buffers(require('telescope.themes').get_cursor {})
