@@ -34,3 +34,18 @@ vim.keymap.set('n', '<Tab>', '<cmd>bnext<CR>', { desc = '[B]uffer [N]ext' })
 vim.keymap.set('n', '<S-Tab>', '<cmd>bprev<CR>', { desc = '[B]uffer [P]revious' })
 vim.keymap.set('n', '<leader>bn', '<cmd>enew<CR>', { desc = '[B]uffer [N]ew' })
 -- vim.keymap.set('n', ';', ':')
+
+vim.keymap.set('n', '<leader>cc', function()
+  local config = { scope = {} }
+  config.scope.exclude = { language = {}, node_type = {} }
+  config.scope.include = { node_type = {} }
+  local node = require('ibl.scope').get(vim.api.nvim_get_current_buf(), config)
+
+  if node then
+    local start_row, _, end_row, _ = node:range()
+    if start_row ~= end_row then
+      vim.api.nvim_win_set_cursor(vim.api.nvim_get_current_win(), { start_row + 1, 0 })
+      vim.api.nvim_feedkeys('_', 'n', true)
+    end
+  end
+end, { desc = '[C]ode [C]ontext' })

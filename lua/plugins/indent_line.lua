@@ -4,7 +4,10 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    event = 'VeryLazy',
-    opts = {},
+    event = 'BufEnter',
+    opts = {
+      scope = { char = '│' },
+      indent = { char = '│' },
+    },
   },
 }
