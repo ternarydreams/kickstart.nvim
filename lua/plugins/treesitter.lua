@@ -7,10 +7,12 @@ return {
         'bash',
         'c',
         'diff',
-        -- 'html',
+        'html',
         'lua',
         'luadoc',
         'markdown',
+        'markdown_inline',
+        'query',
         'vim',
         'vimdoc',
         -- personal additions
