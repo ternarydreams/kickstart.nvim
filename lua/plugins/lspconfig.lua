@@ -168,7 +168,7 @@ return {
       local servers = {
         clangd = {},
         cmake = {},
-        -- gopls = {},
+        gopls = {},
         pyright = {
           settings = {
             python = {

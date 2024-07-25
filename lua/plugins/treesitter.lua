@@ -18,7 +18,7 @@ return {
         -- personal additions
         'python',
         'verilog',
-        -- 'go',
+        'go',
         'json',
       }, -- Autoinstall languages that are not installed
       auto_install = true,
