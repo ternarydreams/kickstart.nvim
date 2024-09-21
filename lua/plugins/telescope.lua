@@ -84,15 +84,7 @@ return {
       vim.keymap.set('n', '<leader>sd', builtin.diagnostics, { desc = '[S]earch [D]iagnostics' })
       vim.keymap.set('n', '<leader>sr', builtin.resume, { desc = '[S]earch [R]esume' })
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
-      vim.keymap.set('n', '<leader><leader>', function()
-        builtin.buffers(require('telescope.themes').get_ivy { initial_mode = 'insert' })
-      end, { desc = '[ ] Find existing buffers' })
-      -- vim.keymap.set('n', '<leader>bf', function()
-      --   builtin.buffers(require('telescope.themes').get_cursor {})
-      -- end, { desc = '[ ] Find existing buffers' })
-      -- vim.keymap.set('n', '<leader>bg', function()
-      --   builtin.buffers(require('telescope.themes').get_dropdown {})
-      -- end, { desc = '[ ] Find existing buffers' })
+      vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
@@ -112,10 +104,10 @@ return {
         }
       end, { desc = '[S]earch [/] in Open Files' })
 
-      -- Shortcuts for searching your Neovim configuration files
-      vim.keymap.set('n', '<leader>snf', function()
+      -- Shortcut for searching your Neovim configuration files
+      vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
-      end, { desc = '[S]earch [N]eovim [F]iles' })
+      end, { desc = '[S]earch [N]eovim files' })
       vim.keymap.set('n', '<leader>sng', function()
         builtin.live_grep { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim [G]rep' })
