@@ -180,8 +180,14 @@ return {
           },
         },
         verible = {
-          cmd = { 'verible-verilog-ls', '--rules_config_search' },
+          cmd = {
+            'verible-verilog-ls',
+            '--rules=-no-tabs' --[[ '--rules_config_search' ]],
+          },
           filetypes = { 'systemverilog', 'verilog' },
+          root_dir = function()
+            return vim.uv.cwd()
+          end,
         },
         lua_ls = {
           -- cmd = {...},
